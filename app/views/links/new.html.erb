@@ -1,0 +1,9 @@
+<div class="container">
+    <h1 class="title mt-5"> Create new short URL </h1>
+    <h2 class="has-text-danger"> <%= @error %> </h2>
+    <%= form_with url: "/new", method: :post do |form| %>
+        <%= form.text_area :message, class: "input" %>
+        <%= form.submit "Create", class: "button"%>
+    <% end %>
+    <%= link_to nil, @url, target: :_blank %>
+</div> 
